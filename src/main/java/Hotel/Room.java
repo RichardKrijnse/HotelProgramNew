@@ -38,4 +38,13 @@ public class Room {
     public int getRoomID() {
         return roomID;
     }
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "roomSize=" + roomSize +
+                ", roomType='" + roomType + '\'' +
+                ", roomID=" + roomID +
+                '}';
+    }
 }

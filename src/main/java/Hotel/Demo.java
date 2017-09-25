@@ -14,7 +14,7 @@ public class Demo {
         roomList.add(room2);
         roomList.add(room3);
 
-//        System.out.println(roomList.get(1).toString());
+       System.out.println(roomList.get(1).toString());
         System.out.println(roomList.get(1).getRoomType());
 
 //        for(Room d:roomList) {
