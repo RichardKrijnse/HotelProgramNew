@@ -15,7 +15,6 @@ public class Room {
         this.roomID = roomID;
     }
 
-
     public void setRoomSize(int roomSize) {
         this.roomSize = roomSize;
     }
