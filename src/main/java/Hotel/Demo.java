@@ -1,30 +1,59 @@
 package Hotel;
+import com.sun.org.apache.xpath.internal.SourceTree;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
 
 public class Demo {
+
+
     public static void main(String[] args) {
-        Room room1 = new Room(4, "Luxe", 1);
-        Room room2 = new Room(2, "Business", 2);
-        Room room3 = new Room(6, "Budget", 3);
+        Room room1 = new Room(1, 4, "Luxe","now");
+        Room room2 = new Room(2, 2, "Business","now");
+        Room room3 = new Room(3, 6, "Budget", "now");
+        Room room4 = new Room(4,6, "Luxe", "30-09-2017");
+        Room room5 = new Room(5,2,"Business","31-09-2017");
 
-        ArrayList<Room> roomList = new ArrayList<Room>();
-        roomList.add(room1);
-        roomList.add(room2);
-        roomList.add(room3);
+        ArrayList<Room> availableRooms = new ArrayList<Room>();
+        availableRooms.add(room1);
+        availableRooms.add(room2);
+        availableRooms.add(room3);
 
-       System.out.println(roomList.get(1).toString());
-        System.out.println(roomList.get(1).getRoomType());
+        ArrayList<Room> rentedRooms = new ArrayList<Room>();
+        rentedRooms.add(room4);
 
-//        for(Room d:roomList) {
-//            System.out.println(roomList.get[d]);
-//        }
+        ArrayList<Room> maintenanceRooms = new ArrayList<Room>();
+        maintenanceRooms.add(room5);
+
+        StringBuilder availableRoomsSB = new StringBuilder();
+        for (Room value : availableRooms) {
+            availableRoomsSB.append(value);
+        }
+        String textAvailableRooms = availableRoomsSB.toString();
+
+            StringBuilder rentedRoomsSb = new StringBuilder();
+            for (Room value : rentedRooms) {
+                rentedRoomsSb.append(value);
+             }
+            String textRentedRooms = rentedRoomsSb.toString();
+
+                StringBuilder maintenanceRoomsSb = new StringBuilder();
+                for (Room value : maintenanceRooms) {
+                    maintenanceRoomsSb.append(value);
+                }
+                String textMaintenaceRooms = maintenanceRoomsSb.toString();
 
 
-//        for (int i = 0; i < roomList.size(); i++) {
-//            System.out.println(roomList[i]);
-//        }
+        System.out.println("Available Rooms: \n"+ textAvailableRooms);
+        System.out.println("Rented Rooms: \n" + textRentedRooms);
+        System.out.println("Maintenance Rooms: \n" + textMaintenaceRooms);
+
+
+      //  System.out.println(formattedString.toString());
+        //System.out.println(roomList.get(2));
+
+        room2.setDateReady("21-05-2014");
+
+//        System.out.println("\n");
+//        System.out.println(formattedString.toString());
 
 
 //        room1.setRoomID(1);
@@ -39,4 +68,8 @@ public class Demo {
 //        System.out.println(booking1.isGuestPaid());
 
     }
+
+
+
+
 }
